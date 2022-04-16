@@ -1,45 +1,39 @@
 <template>
   <div id="app">
+    <TheHeader :title="title" />
     <router-view />
-    <FooterGuide />
+    <TheFooter />
   </div>
 </template>
 
 <script>
-import FooterGuide from "./components/FooterGuide.vue";
+import TheFooter from "./components/TheFooter.vue";
+import TheHeader from "./components/TheHeader.vue";
+import * as _ from "lodash";
 
 export default {
   name: "App",
   components: {
-    FooterGuide,
+    TheFooter,
+    TheHeader,
+  },
+  computed: {
+    title() {
+      // 这里要注意lodash当中split处理的特性
+      const page = _.split(this.$route.path, "/", 2)[1];
+      switch (page) {
+        case "home":
+          return "西南室友大学13栋寝室313号";
+        case "search":
+          return "搜索";
+        case "order":
+          return "订单列表";
+        case "profile":
+          return "我的";
+        default:
+          return "unknown";
+      }
+    },
   },
 };
 </script>
-
-<style>
-/* 引入阿里图标图 */
-@font-face {
-  font-family: "iconfont"; /* Project id 3329582 */
-  src: url("//at.alicdn.com/t/font_3329582_f4u7dy14s8.woff2?t=1649935625706")
-      format("woff2"),
-    url("//at.alicdn.com/t/font_3329582_f4u7dy14s8.woff?t=1649935625706")
-      format("woff"),
-    url("//at.alicdn.com/t/font_3329582_f4u7dy14s8.ttf?t=1649935625706")
-      format("truetype");
-}
-
-.iconfont {
-  font-family: "iconfont" !important;
-  font-size: 16px;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-stroke-width: 0.2px;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* 去除a标签默认样式 */
-a {
-  text-decoration: none;
-  -webkit-tap-highlight-color: transparent;
-}
-</style>
