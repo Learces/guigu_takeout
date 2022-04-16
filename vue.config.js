@@ -3,13 +3,11 @@ const path = require("path");
 
 module.exports = defineConfig({
 	transpileDependencies: true,
+
 	pluginOptions: {
 		"style-resources-loader": {
 			preProcessor: "less",
-			patterns: [
-				path.resolve(__dirname, "./src/assets/global.less"),
-				path.resolve(__dirname, "./src/assets/variable.less"),
-			],
+			patterns: [path.resolve(__dirname, "./src/assets/less/index.less")],
 		},
 	},
 });

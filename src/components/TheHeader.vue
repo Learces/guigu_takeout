@@ -24,11 +24,15 @@ export default {
 	position: fixed;
 	top: 0;
 	left: 0;
-	height: 3rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: @header-height;
 	width: 100%;
 	background-color: @theme-color;
 	font-size: 1.2rem;
 	.title {
+		flex-basis: 100%;
 		overflow: hidden;
 		text-align: center;
 		line-height: 3rem;
