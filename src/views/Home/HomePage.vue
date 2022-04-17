@@ -9,22 +9,25 @@
 			</template>
 		</TheHeader>
 		<TheClassification />
+		<BusinessList />
 	</div>
 </template>
 
 <script>
 import TheHeader from "../../components/TheHeader.vue";
 import TheClassification from "../../components/TheClassification.vue";
+import BusinessList from "../../components/Business/BusinessList.vue";
 
 export default {
 	name: "HomePage",
-	components: { TheHeader, TheClassification },
+	components: { TheHeader, TheClassification, BusinessList },
 };
 </script>
 
 <style lang="less" scoped>
 .home-page {
 	margin-top: @page-margin-top;
+	margin-bottom: @footer-height;
 	.icon-search {
 		font-size: 2.5rem;
 	}

@@ -37,18 +37,19 @@ export default {
 
 <style lang="less" scoped>
 .the-footer {
-	z-index: 9999;
+	// 将组件置于顶层
+	z-index: @topmost-z-index;
 	position: fixed;
 	left: 0;
 	bottom: 0;
 	width: 100%;
-
+	background-color: white;
 	.list {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		justify-content: center;
 		align-items: center;
-		height: 4rem;
+		height: @footer-height;
 		border-top: 1px solid #ccc;
 		box-shadow: 0 2px 30px -10px rgba(0, 0, 0, 0.3);
 

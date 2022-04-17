@@ -21,6 +21,8 @@ export default {
 
 <style lang="less" scoped>
 .the-header {
+	// 将头置于顶层
+	z-index: @topmost-z-index;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -31,11 +33,11 @@ export default {
 	width: 100%;
 	background-color: @theme-color;
 	font-size: 1.2rem;
+	line-height: @header-height;
 	.title {
 		flex-basis: 100%;
 		overflow: hidden;
 		text-align: center;
-		line-height: 3rem;
 		white-space: nowrap;
 		text-overflow: ellipsis;
 	}
