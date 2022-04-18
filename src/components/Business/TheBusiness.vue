@@ -80,7 +80,7 @@ export default {
 		}
 		.evaluation {
 			display: flex;
-			justify-content: start;
+			justify-content: flex-start;
 			// 基线对齐
 			align-items: baseline;
 			// 必须要换行，因为这里所有内容都必须显示，无法用省略号处理

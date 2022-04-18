@@ -19,18 +19,10 @@
 </template>
 
 <script>
-import TheBusiness from "./TheBusiness.vue";
+import TheBusiness from "@/components/Business/TheBusiness.vue";
 export default {
 	components: { TheBusiness },
 	name: "BusinessList",
-
-	data() {
-		return {};
-	},
-
-	mounted() {},
-
-	methods: {},
 };
 </script>
 

@@ -17,9 +17,9 @@
 </template>
 
 <script>
-import TheHeader from "../../components/TheHeader.vue";
-import TheClassification from "../../components/TheClassification.vue";
-import BusinessList from "../../components/Business/BusinessList.vue";
+import TheHeader from "@/components/TheHeader.vue";
+import TheClassification from "@/components/TheClassification.vue";
+import BusinessList from "@/components/Business/BusinessList.vue";
 
 export default {
 	name: "HomePage",
@@ -29,12 +29,13 @@ export default {
 
 <style lang="less" scoped>
 .home-page {
-	margin-top: @page-margin-top;
-	margin-bottom: @footer-height;
+	.page-window();
 	.icon-search {
+		color: #f5f5f5;
 		font-size: 2.2rem;
 	}
 	.login {
+		color: #f5f5f5;
 		white-space: nowrap;
 	}
 	.register {

@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import TheFooter from "./components/TheFooter.vue";
+import TheFooter from "@/components/TheFooter.vue";
 import * as _ from "lodash";
 
 export default {

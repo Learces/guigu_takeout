@@ -35,6 +35,8 @@ export default {
 	.title {
 		flex-basis: 100%;
 		overflow: hidden;
+		color: #f5f5f5;
+		font-size: 1.1rem;
 		white-space: nowrap;
 		text-align: center;
 		text-overflow: ellipsis;
