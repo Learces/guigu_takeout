@@ -32,7 +32,6 @@ export default {
 	height: @header-height;
 	width: 100%;
 	background-color: @theme-color;
-	font-size: 1.2rem;
 	line-height: @header-height;
 	.title {
 		flex-basis: 100%;
