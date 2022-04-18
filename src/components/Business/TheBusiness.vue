@@ -19,11 +19,8 @@
 					<li class="star"></li>
 					<li class="star"></li>
 				</ul>
-				<!-- 这两项捆绑的目的是为了响应时能有一体变化 -->
-				<div class="__binding">
-					<div class="score">4.1</div>
-					<div class="sales">月售104件</div>
-				</div>
+				<div class="score">4.1</div>
+				<div class="sales">月售104件</div>
 				<div class="delivery">硅谷专送</div>
 			</div>
 			<div class="cost">￥20起送/配送费约5元</div>
@@ -100,20 +97,15 @@ export default {
 					background: url(../../assets/image/sprite.png) no-repeat 0 0/320%;
 				}
 			}
-			.__binding {
-				// 让处于中间的位置的项增长，就会把最后一项挤到末尾
+			.score {
+				margin-right: 2px;
+				font-size: 1.2rem;
+				color: #ff9900;
+			}
+			.sales {
 				flex-grow: 1;
-				display: flex;
-				align-items: baseline;
-				.score {
-					margin-right: 2px;
-					font-size: 1.2rem;
-					color: #ff9900;
-				}
-				.sales {
-					font-size: 0.8rem;
-					color: #999;
-				}
+				font-size: 0.8rem;
+				color: #999;
 			}
 			.delivery {
 				padding: 0 5px;
