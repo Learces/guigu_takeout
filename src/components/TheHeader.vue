@@ -1,8 +1,8 @@
 <template>
 	<div class="the-header">
-		<slot name="left" />
+		<slot name="left"></slot>
 		<div class="title">{{ title }}</div>
-		<slot name="right" />
+		<slot name="right"></slot>
 	</div>
 </template>
 
