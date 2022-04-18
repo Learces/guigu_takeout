@@ -21,23 +21,22 @@ export default {
 
 <style lang="less" scoped>
 .the-header {
-	// 将头置于顶层
-	z-index: @topmost-z-index;
 	position: fixed;
+	z-index: @topmost-z-index;
 	top: 0;
 	left: 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	height: @header-height;
 	width: 100%;
+	height: @header-height;
 	background-color: @theme-color;
 	line-height: @header-height;
 	.title {
 		flex-basis: 100%;
 		overflow: hidden;
-		text-align: center;
 		white-space: nowrap;
+		text-align: center;
 		text-overflow: ellipsis;
 	}
 }

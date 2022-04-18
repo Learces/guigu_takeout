@@ -4,9 +4,11 @@
 		<swiper ref="swiperWrapper" :options="swiperOptions">
 			<swiper-slide v-for="page in pages" :key="page.id">
 				<ul class="list">
-					<li v-for="item in page.data" :key="item.id" class="item">
-						<img :src="item.cover" class="cover" />
-						<span>{{ item.title }}</span>
+					<li v-for="item in page.data" :key="item.id">
+						<router-link to="/profile" class="item">
+							<img :src="item.cover" class="cover" />
+							<span>{{ item.title }}</span>
+						</router-link>
 					</li>
 				</ul>
 			</swiper-slide>
@@ -135,10 +137,10 @@ export default {
 .the-classification {
 	border-bottom: 1px solid #999;
 	.list {
-		width: 100%;
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		grid-template-rows: repeat(2, 1fr);
+		width: 100%;
 		.item {
 			display: flex;
 			flex-direction: column;

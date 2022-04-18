@@ -1,5 +1,5 @@
 <template>
-	<div class="the-business">
+	<router-link to="/profile" class="the-business">
 		<img class="cover" src="https://picsum.photos/id/133/2742/1828" />
 		<div class="introduction">
 			<div class="title">
@@ -25,7 +25,7 @@
 			</div>
 			<div class="cost">￥20起送/配送费约5元</div>
 		</div>
-	</div>
+	</router-link>
 </template>
 
 <script>
@@ -65,7 +65,6 @@ export default {
 				overflow: hidden;
 				padding: 0 3px;
 				font-weight: bold;
-				font-size: 1.2rem;
 				white-space: nowrap;
 				text-overflow: ellipsis;
 			}
@@ -74,6 +73,7 @@ export default {
 				grid-template-columns: repeat(auto-fill, 1.2rem);
 				.right {
 					justify-self: end;
+					font-size: 0.9rem;
 					color: #999;
 				}
 			}
@@ -99,8 +99,8 @@ export default {
 			}
 			.score {
 				margin-right: 2px;
-				font-size: 1.2rem;
 				color: #ff9900;
+				font-size: 1.2rem;
 			}
 			.sales {
 				flex-grow: 1;

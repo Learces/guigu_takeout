@@ -37,9 +37,8 @@ export default {
 
 <style lang="less" scoped>
 .the-footer {
-	// 将组件置于顶层
-	z-index: @topmost-z-index;
 	position: fixed;
+	z-index: @topmost-z-index;
 	left: 0;
 	bottom: 0;
 	width: 100%;
@@ -52,7 +51,6 @@ export default {
 		height: @footer-height;
 		border-top: 1px solid #ccc;
 		box-shadow: 0 2px 30px -10px rgba(0, 0, 0, 0.3);
-
 		.item {
 			display: flex;
 			flex-direction: column;
@@ -60,12 +58,9 @@ export default {
 			align-items: center;
 			color: #666;
 		}
-
 		.icon {
 			font-size: 1.6rem;
 		}
-
-		// 活跃路由样式
 		.router-link-active {
 			color: @theme-color;
 		}

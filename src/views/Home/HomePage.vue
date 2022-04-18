@@ -8,7 +8,6 @@
 			</template>
 			<template #right>
 				<router-link to="/profile" class="login"> 登录 </router-link>
-				<!-- <span class="__separator">|</span> -->
 				<router-link to="/profile" class="register"> 注册 </router-link>
 			</template>
 		</TheHeader>
@@ -33,11 +32,9 @@ export default {
 	margin-top: @page-margin-top;
 	margin-bottom: @footer-height;
 	.icon-search {
-		color: #333;
 		font-size: 2.2rem;
 	}
 	.login {
-		color: #333;
 		white-space: nowrap;
 	}
 	.register {

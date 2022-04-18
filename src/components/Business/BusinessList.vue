@@ -38,9 +38,9 @@ export default {
 .business-list {
 	.head {
 		height: 40px;
+		color: #666;
 		font-size: 1.2rem;
 		line-height: 40px;
-		color: #666;
 		.icon-list {
 			display: inline-block;
 			margin: 0 5px 0 8px;
