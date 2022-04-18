@@ -1,10 +1,12 @@
 <template>
 	<div class="the-property">
-		<router-link to="/">
-			<span class="surplus" :style="{ color: color }">{{ surplus }}</span>
-			<span class="unit">{{ unit }}</span>
+		<router-link to="/" class="wrapper">
+			<div class="value" :style="{ color: color }">
+				{{ balanceValue }}
+			</div>
+			<div class="unit">{{ balanceUnit }}</div>
+			<div class="item">{{ item }}</div>
 		</router-link>
-		<div>{{ item }}</div>
 	</div>
 </template>
 
@@ -13,7 +15,7 @@ export default {
 	name: "TheProperty",
 	props: {
 		// 余额
-		surplus: {
+		balanceValue: {
 			type: Number,
 			default: 0,
 			validator(value) {
@@ -21,7 +23,7 @@ export default {
 			},
 		},
 		// 财产单位
-		unit: {
+		balanceUnit: {
 			type: String,
 			require: true,
 			validator(value) {
@@ -49,5 +51,34 @@ export default {
 <style lang="less" scoped>
 .the-property {
 	height: 100px;
+	background-color: #fff;
+	margin-left: 2px;
+	&:first-child {
+		margin-left: 0;
+	}
+	.wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: baseline;
+		align-content: center;
+		width: 100%;
+		height: 100%;
+		.value {
+			font-size: 2rem;
+			font-weight: bold;
+		}
+		.unit {
+			margin-left: 5px;
+			// 视觉修饰
+			transform: translateY(-2px);
+		}
+		.item {
+			flex-basis: 100%;
+			margin-top: 5px;
+			color: #999;
+			text-align: center;
+		}
+	}
 }
 </style>
