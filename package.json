@@ -9,16 +9,12 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
-<<<<<<< HEAD
     "lodash": "^4.17.21",
     "nanoid": "^3.3.2",
     "swiper": "^5.4.5",
     "vue": "^2.6.14",
     "vue-awesome-swiper": "^4.1.1",
     "vue-router": "^3.5.3"
-=======
-    "vue": "^2.6.14"
->>>>>>> d732356 (init)
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -28,13 +24,10 @@
     "@vue/cli-service": "~5.0.0",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
-<<<<<<< HEAD
     "less": "^4.1.2",
     "less-loader": "^7.3.0",
     "style-resources-loader": "^1.5.0",
     "vue-cli-plugin-style-resources-loader": "^0.1.5",
-=======
->>>>>>> d732356 (init)
     "vue-template-compiler": "^2.6.14"
   },
   "eslintConfig": {
