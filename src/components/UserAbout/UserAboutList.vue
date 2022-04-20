@@ -1,24 +1,21 @@
 <template>
-	<div class="user-about-list">
-		<ul>
-			<li v-for="(vnode, index) in $slots" :key="index">
-				<slot></slot>
-			</li>
-		</ul>
-	</div>
+  <div class="user-about-list">
+    <ul>
+      <li v-for="(vnode, index) in $slots" :key="index">
+        <slot></slot>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
 export default {
-	name: "UserAboutList",
-	mounted() {
-		console.log(this.$slots);
-	},
+  name: "UserAboutList",
 };
 </script>
 
 <style lang="less" scoped>
 .user-about-list {
-	margin-top: 10px;
+  margin-top: 10px;
 }
 </style>

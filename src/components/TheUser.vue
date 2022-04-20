@@ -10,7 +10,7 @@
         {{ defaultPhone }}
       </span>
     </div>
-    <router-link to="/search" class="iconfont jump">&#xe735;</router-link>
+    <router-link to="/login" class="iconfont jump">&#xe735;</router-link>
   </div>
 </template>
 
