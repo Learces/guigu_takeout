@@ -2,13 +2,11 @@
   <div class="password-mode">
     <input type="text" placeholder="手机" class="username" maxlength="11" />
     <div class="password">
-      <input type="password" placeholder="密码" maxlength="16" />
-      <span v-if="isVisible" @click="isVisible = !isVisible" class="iconfont"
+      <input type="password" placeholder="密码" maxlength="16" ref="password" />
+      <span v-if="isVisible" @click="toggleType()" class="iconfont"
         >&#xe611;</span
       >
-      <span v-else class="iconfont" @click="isVisible = !isVisible"
-        >&#xe610;</span
-      >
+      <span v-else class="iconfont" @click="toggleType()">&#xe610;</span>
     </div>
     <div class="captcha">
       <input type="text" placeholder="验证码" maxlength="4" />
@@ -24,6 +22,16 @@ export default {
     return {
       isVisible: false,
     };
+  },
+  methods: {
+    toggleType() {
+      this.isVisible = !this.isVisible;
+      if (this.isVisible) {
+        this.$refs.password.type = "text";
+      } else {
+        this.$refs.password.type = "password";
+      }
+    },
   },
 };
 </script>
