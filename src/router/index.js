@@ -41,7 +41,7 @@ export default new VueRouter({
       component: HomePage,
       children: [
         {
-          path: "/:restaurant",
+          path: "/restaurant",
           component: RestaurantPage,
         },
       ],

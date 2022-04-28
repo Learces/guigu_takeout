@@ -110,9 +110,6 @@ export default {
       return stars;
     },
   },
-  mounted() {
-    console.log(this.stars);
-  },
 };
 </script>
 

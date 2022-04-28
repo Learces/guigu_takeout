@@ -6,15 +6,17 @@
       <button>提交</button>
     </div>
     <SearchList />
+    <TheFooter />
   </div>
 </template>
 
 <script>
 import TheHeader from "@/components/TheHeader.vue";
+import TheFooter from "@/components/TheFooter.vue";
 import SearchList from "@/components/Search/SearchList.vue";
 export default {
   name: "SearchPage",
-  components: { TheHeader, SearchList },
+  components: { TheHeader, TheFooter, SearchList },
 };
 </script>
 
