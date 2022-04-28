@@ -15,11 +15,15 @@
       </div>
       <div class="evaluation">
         <ul class="stars">
-          <li class="star"></li>
-          <li class="star"></li>
-          <li class="star"></li>
-          <li class="half-star"></li>
-          <li class="complete-star"></li>
+          <li
+            v-for="(item, index) in stars"
+            :key="index"
+            :class="{
+              star: item === 10,
+              'half-star': item === 5,
+              'complete-star': item === 0,
+            }"
+          ></li>
         </ul>
         <div class="score">{{ score }}</div>
         <div class="sales">月售{{ sales }}件</div>
@@ -96,11 +100,11 @@ export default {
       // 完整星数量
       const completeStars = Math.floor(this.score);
       _.fill(stars, 10, fillIndex, fillIndex + completeStars);
-      fillIndex = completeStars;
+      fillIndex += completeStars;
       // 是否有半星
-      const haflStar = Math.floor(this.score * 10) % 5;
-      _.fill(stars, 5, fillIndex, fillIndex + haflStar);
-      fillIndex += haflStar;
+      const halfStar = (Math.floor(this.score * 10) % 10) / 5;
+      _.fill(stars, 5, fillIndex, fillIndex + halfStar);
+      fillIndex += halfStar;
       // 黑星数量
       _.fill(stars, 0, fillIndex);
       return stars;
@@ -179,10 +183,11 @@ export default {
           background: url(../../assets/image/star.png) no-repeat 0 0/320%;
         }
         .half-star {
-          background: url(../../assets/image/star.png) no-repeat 250px 0/320%;
+          background: url(../../assets/image/star.png) no-repeat right -17px top
+            0/320%;
         }
         .complete-star {
-          background: url(../../assets/image/star.png) no-repeat 500px 0/320%;
+          background: url(../../assets/image/star.png) no-repeat -34px 0/320%;
         }
       }
       .score {
