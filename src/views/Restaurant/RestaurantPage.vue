@@ -1,5 +1,12 @@
 <template>
-  <div class="restaurant-page">
+  <div
+    class="restaurant-page"
+    :class="{
+      'cover--entrances': isCover === 1,
+      'cover--exits': isCover === -1,
+      '': isCover === 0,
+    }"
+  >
     <div class="poster">
       <img src="https://picsum.photos/id/564/200/200" class="logo" />
     </div>
@@ -27,7 +34,7 @@
     <router-view />
     <transition
       enter-active-class="scale-up-ver-bottom"
-      leave-active-class="scale-bottom-ver-up"
+      leave-active-class="scale-out-ver-bottom"
     >
       <ShoppingList v-if="isShow" />
     </transition>
@@ -47,14 +54,22 @@ export default {
   data() {
     return {
       isShow: false,
+      isCover: 0,
     };
   },
   mounted() {
     PubSub.subscribe("SHOW_SHOPPING_LIST", () => {
       if (this.isShow) {
         this.isShow = false;
+        this.isCover = -1;
       } else {
         this.isShow = true;
+        this.isCover = 1;
+        this.$el.ontouchmove = (e) => {
+          if (e.target === this.$el) {
+            e.preventDefault();
+          }
+        };
       }
     });
   },
@@ -63,7 +78,9 @@ export default {
 
 <style lang="less" scoped>
 .restaurant-page {
+  position: relative;
   overflow: auto;
+  height: 100vh;
   padding-bottom: 4rem;
   .poster {
     position: relative;
@@ -124,5 +141,31 @@ export default {
       text-underline-offset: 10px;
     }
   }
+}
+
+.cover--entrances::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: @topmost-z-index;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.7);
+  .scale-in-hor-center();
+}
+
+.cover--exits::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: @topmost-z-index;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.7);
+  .scale-out-horizontal();
 }
 </style>

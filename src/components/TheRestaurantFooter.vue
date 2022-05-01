@@ -27,6 +27,7 @@ export default {
 
 <style lang="less" scoped>
 .the-restaurant-footer {
+  z-index: @topmost-z-index;
   position: fixed;
   left: 0;
   bottom: 0;
