@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import LoginForm from "@/components/LoginForm/LoginForm.vue";
+import LoginForm from "@/views/Login/LoginForm/LoginForm.vue";
 export default {
   components: { LoginForm },
   name: "LoginPage",

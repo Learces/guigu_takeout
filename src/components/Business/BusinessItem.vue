@@ -1,5 +1,5 @@
 <template>
-  <router-link to="/profile" class="the-business">
+  <router-link to="/restaurant" class="the-business">
     <img class="cover" src="https://picsum.photos/id/133/2742/1828" />
     <div class="introduction">
       <div class="title">
