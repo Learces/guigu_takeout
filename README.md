@@ -1,6 +1,5 @@
 # guigu_takeout
 
-<<<<<<< HEAD
 #### 介绍
 
 Vue2 学习联系项目，同时兼具练习 Git
